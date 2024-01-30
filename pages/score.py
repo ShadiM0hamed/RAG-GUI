@@ -34,7 +34,6 @@ def score_view():
             checked_checkboxes.append(x)
 
     if st.button('GPT-Answer'):
-        st.markdown(checked_checkboxes)
         # Use the checked_checkboxes list as needed
         gpt_answer = server_answering(query, checked_checkboxes)
         save_gptanswer_to_file(gpt_answer)
